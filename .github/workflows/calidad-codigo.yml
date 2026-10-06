@@ -50,7 +50,7 @@ jobs:
           cache: maven
 
       - name: Verificar formato con Spotless
-        run: ./mvnw --batch-mode spotless:check
+        run: mvn --batch-mode spotless:check
 
   checkstyle:
     name: Checkstyle (convenciones de código)
@@ -68,7 +68,7 @@ jobs:
           cache: maven
 
       - name: Verificar convenciones con Checkstyle
-        run: ./mvnw --batch-mode checkstyle:check
+        run: mvn --batch-mode checkstyle:check
 
   pmd:
     name: PMD (code smells)
